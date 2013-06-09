@@ -1,5 +1,17 @@
 #!/usr/bin/python2
 #coding:utf-8
+# SCRIPT: slideshare_downloader.py
+# AUTHOR: DARK_LBP
+# DATE: 2013/06/09
+# REV: 0.6
+# PURPOSE:
+# Download Document images from slideshare and convert to pdf format.
+# Need imagemagick to convert to pdf
+# Use Age:
+# ./slideshare_downloader.py -p http://127.0.0.1:8086 -s \
+# http://www.slideshare.net/thegaragegroup/new-approaches-to-business-model-innovation \
+# -f abc.pdf
+
 import Image
 import pycurl
 import StringIO
