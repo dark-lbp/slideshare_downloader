@@ -23,7 +23,7 @@ if len(sys.argv) == 1:  # 当用户没有输入任何参数时显示帮助并退
 args = vars(args)   # converts the arguments into dictionary format for easier retrieval.
 
 
-def get_html(url):
+def get_result(url):
     buf = StringIO.StringIO()
     c = pycurl.Curl()
     c.setopt(c.URL, url)
@@ -61,7 +61,7 @@ def download_image(url, number):
     number = number + 1
     for i in range(1, number):
         img_url = '%s-%s-1024.jpg' % (url, i)
-        img = get_html(img_url)
+        img = get_result(img_url)
         img = Image.open(StringIO.StringIO(img))
         img.save('../output/%s.jpg' % i)
         sys.stdout.write("-")
@@ -87,7 +87,7 @@ def convert_to_pdf(filename):
 
 
 if __name__ == '__main__':
-    html = get_html(args['url'])
+    html = get_result(args['url'])
     url = get_img_url(html)
     pages = get_pages(html)
     download_image(url, pages)
