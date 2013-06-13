@@ -2,6 +2,7 @@
 #coding:utf-8
 # SCRIPT: slideshare_downloader.py
 # AUTHOR: DARK_LBP
+# MAIL: jtrkid@gmail.com
 # DATE: 2013/06/09
 # REV: 0.6
 # PURPOSE:
